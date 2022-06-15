@@ -1,9 +1,6 @@
 
 # ipyniivue
 
-[![Build Status](https://travis-ci.org/ipyniivue.svg?branch=master)](https://travis-ci.org/ipyniivue)
-[![codecov](https://codecov.io/gh//pyniivue/branch/master/graph/badge.svg)](https://codecov.io/gh/ipyniivue)
-
 ![example](docs/example.png)
 [Niivue](https://github.com/niivue/niivue) in Jupyter
 

@@ -9,6 +9,13 @@ from glob import glob
 import os
 from os.path import join as pjoin
 from setuptools import setup, find_packages
+from setuptools.command.build_py import build_py
+
+
+class NPMInstall(build_py):
+    def run(self):
+        self.run_command('npm install --prefix test/functional yarn')
+        build_py.run(self)
 
 
 from jupyter_packaging import (
@@ -62,6 +69,7 @@ npm_install = combine_commands(
     ensure_targets(jstargets),
 )
 cmdclass['jsdeps'] = skip_if_exists(jstargets, npm_install)
+cmdclass['npm_install'] =  NPMInstall
 
 
 setup_args = dict(
@@ -93,6 +101,7 @@ setup_args = dict(
     python_requires=">=3.6",
     install_requires = [
         'ipywidgets>=7.0.0',
+        'jupyter_packaging'
     ],
     extras_require = {
         'test': [

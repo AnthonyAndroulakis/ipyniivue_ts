@@ -9,7 +9,8 @@ TODO: Add module docstring
 """
 
 from ipywidgets import DOMWidget, ValueWidget, register
-from traitlets import Unicode, Bool, validate, TraitError, Int
+from traitlets import Unicode, List, Int
+from .traits import Volume
 
 from ._frontend import module_name, module_version
 
@@ -23,7 +24,14 @@ class Niivue(DOMWidget, ValueWidget):
     _view_module = Unicode(module_name).tag(sync=True)
     _view_module_version = Unicode(module_version).tag(sync=True)
 
-    height = Int(480).tag(sync=True)
-    #width = Int(640).tag(sync=True)
-    #value = Unicode('example@example.com').tag(sync=True)
-    #disabled = Bool(False, help="Enable or disable user changes.").tag(sync=True)
+    volumes = List(trait=Volume, default_value=[]).tag(sync=True)
+    height = Int(default_value=300).tag(sync=True)
+
+    def __init__(self):
+        super(Niivue, self).__init__()
+
+    def load_volumes(self, volumes):
+        self.volumes = volumes
+
+    def set_height(self, height):
+        self.height = height

@@ -8,12 +8,19 @@ import { createTestModel } from './utils';
 
 import { NiivueModel } from '..';
 
-describe('Niivue', () => {
+describe('Example', () => {
   describe('NiivueModel', () => {
     it('should be createable', () => {
       const model = createTestModel(NiivueModel);
       expect(model).toBeInstanceOf(NiivueModel);
-      expect(model.get('value')).toEqual(null);
+      expect(model.get('value')).toEqual('Hello World');
+    });
+
+    it('should be createable with a value', () => {
+      const state = { value: 'Foo Bar!' };
+      const model = createTestModel(NiivueModel, state);
+      expect(model).toBeInstanceOf(NiivueModel);
+      expect(model.get('value')).toEqual('Foo Bar!');
     });
   });
 });

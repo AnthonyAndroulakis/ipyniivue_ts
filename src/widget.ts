@@ -6,7 +6,7 @@ import {
 
 import { MODULE_NAME, MODULE_VERSION } from './version';
 
-import { Niivue } from '@niivue/niivue';
+import * as niivue from '@niivue/niivue';
 
 export class NiivueModel extends DOMWidgetModel {
   defaults() {
@@ -87,7 +87,7 @@ export class NiivueView extends DOMWidgetView {
     this.el.appendChild(divEl);
     this.el.classList.add('custom-widget');
 
-    this._nv = new Niivue({logging:true});
+    this._nv = new niivue.Niivue({logging:true});
     this._nv.attachToCanvas(this._canvas);
     this._nv.updateGLVolume();
 

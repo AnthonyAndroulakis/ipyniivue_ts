@@ -13,14 +13,14 @@ describe('Example', () => {
     it('should be createable', () => {
       const model = createTestModel(NiivueModel);
       expect(model).toBeInstanceOf(NiivueModel);
-      expect(model.get('value')).toEqual('Hello World');
+      expect(model.get('text_height')).toEqual(0.06);
     });
 
     it('should be createable with a value', () => {
-      const state = { value: 'Foo Bar!' };
+      const state = { text_height: 0.05 };
       const model = createTestModel(NiivueModel, state);
       expect(model).toBeInstanceOf(NiivueModel);
-      expect(model.get('value')).toEqual('Foo Bar!');
+      expect(model.get('text_height')).toEqual(0.05);
     });
   });
 });

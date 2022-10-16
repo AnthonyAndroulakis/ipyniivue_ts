@@ -19,7 +19,8 @@
   },
   "license": "BSD-3-Clause",
   "author": {
-    "name": "Niivue"
+    "name": "anthony",
+    "email": "me@me.com"
   },
   "main": "lib/index.js",
   "types": "./lib/index.d.ts",

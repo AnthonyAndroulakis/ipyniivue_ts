@@ -1,3 +1,9 @@
+#!/usr/bin/env python
+# coding: utf-8
+
+# Copyright (c) Niivue.
+# Distributed under the terms of the Modified BSD License.
+
 from ipywidgets import DOMWidget, ValueWidget, register
 from traitlets import Unicode, List, Int, Float, Bool, UseEnum, CaselessStrEnum
 from .traits import Volume, DragModes, keycodes 

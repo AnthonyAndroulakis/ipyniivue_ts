@@ -6,7 +6,7 @@
 
 import pytest
 
-from ..widget import Niivue
+from ..ipyniivue import Niivue
 
 
 def test_example_creation_blank():

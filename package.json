@@ -1,6 +1,6 @@
 {
   "name": "ipyniivue",
-  "version": "0.2.0",
+  "version": "0.1.0",
   "description": "niivue in jupyter",
   "keywords": [
     "jupyter",
@@ -19,8 +19,7 @@
   },
   "license": "BSD-3-Clause",
   "author": {
-    "name": "anthony",
-    "email": "me@me.com"
+    "name": "Niivue"
   },
   "main": "lib/index.js",
   "types": "./lib/index.d.ts",

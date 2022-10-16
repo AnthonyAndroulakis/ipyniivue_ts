@@ -1,4 +1,4 @@
-// Copyright (c) anthony
+// Copyright (c) Niivue
 // Distributed under the terms of the Modified BSD License.
 
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment

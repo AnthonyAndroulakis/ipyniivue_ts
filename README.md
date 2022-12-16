@@ -4,6 +4,7 @@
 [![Build Status](https://travis-ci.org/niivue/ipyniivue.svg?branch=master)](https://travis-ci.org/niivue/ipyniivue)
 [![codecov](https://codecov.io/gh/niivue/ipyniivue/branch/master/graph/badge.svg)](https://codecov.io/gh/niivue/ipyniivue)
 
+__Please refer to https://github.com/niivue/pyniivue for the updated version. Changes are no longer pushed to this repository.__
 
 niivue in jupyter
 
